@@ -1,0 +1,18 @@
+version: '3'
+services:
+  notebook:
+    build:
+      context: .
+      dockerfile: Dockerfile_ScipyNB_with_Requirements
+    ports:
+     - ${NOTEBOOK_PORT}:${NOTEBOOK_PORT}
+    volumes:
+     - ${CWD}:/home/jovyan/work
+    entrypoint:
+     - jupyter 
+     - notebook
+     - --port
+     - ${NOTEBOOK_PORT}
+    stdin_open: true
+    tty: true
+

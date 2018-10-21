@@ -1,0 +1,10 @@
+FROM jupyter/scipy-notebook
+
+USER $NB_USER
+
+COPY requirements.txt /opt/app/requirements.txt
+
+RUN pip install -r /opt/app/requirements.txt
+
+
+
