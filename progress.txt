@@ -1,1 +1,2 @@
 20181021: finished day0
+20181119: skipped day1 (python intro), finished day2-anatomical
